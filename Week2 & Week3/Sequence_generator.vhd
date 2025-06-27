@@ -4,7 +4,7 @@ package Flipflops is
 component dff_set is
 							port(D,clock,set:in std_logic;
 									Q:out std_logic);
-end component dff_se;
+end component dff_set;
 
 component dff_reset is
 							port(D,clock,reset:in std_logic;
