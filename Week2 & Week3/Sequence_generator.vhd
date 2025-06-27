@@ -72,3 +72,4 @@ begin
     DFF0: dff_set   port map(D(0), clock, reset, Q(0));  -- SET to '1' (reset signal drives set)
 	 
 end code;
+
