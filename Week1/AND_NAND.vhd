@@ -14,4 +14,4 @@ begin
 			rendu : NAND2
 						port map( A => s , B => s , Y => Y);
 
-end Struct;
+end code;
