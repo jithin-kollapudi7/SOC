@@ -1,4 +1,4 @@
-# SoC Neural Network Hardware – Midterm Report
+# SOC Neural Network Hardware – Midterm Report
 
 ## Overview
 
