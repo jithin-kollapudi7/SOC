@@ -25,8 +25,32 @@ This repository documents the initial progress of the SoC project focused on imp
 - `sequence_generator.vhd`: Sequence generator using D flip-flops.
 - `word_detection.vhd`: FSM-based word detection using Mealy machines.
 
-## Next Steps
+## Project
+# Neural Network Hardware Accelerator
+**Verilog Implementation of a 3-4-2 Fully Connected Neural Network**
 
-- Implement basic neuron logic blocks.
-- Explore combinational implementations of activation functions.
-- Begin integration of components for larger neural architectures.
+## Overview
+This project implements a custom hardware accelerator for neural network inference in Verilog. The design features:
+- 3-layer fully connected neural network (3-4-2 architecture)
+- Parallel MAC execution with sequential input feeding
+- 8-state FSM controller for precise timing
+- Saturation-handling ReLU activation
+- Automated testbench verification
+
+## Key Features
+### Hardware Architecture
+- **3-4-2 Network Structure**:
+  - Input layer: 3 neurons
+  - Hidden layer: 4 neurons with ReLU activation
+  - Output layer: 2 neurons with ReLU activation
+- **Pre-trained 8-bit Weights**:
+  ```verilog
+  // Hidden layer weights
+  W1[0] = [2, 3, 1]; b1[0] = 1
+  W1[1] = [3, 1, 2]; b1[1] = 1
+  W1[2] = [1, 2, 3]; b1[2] = 1
+  W1[3] = [2, 1, 3]; b1[3] = 1
+  
+  // Output layer weights
+  W2[0] = [1, 2, 1, 2]; b2[0] = 1
+  W2[1] = [2, 1, 2, 1]; b2[1] = 1
